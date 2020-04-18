@@ -1,0 +1,124 @@
+/* game board table */
+#board {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+#board td {
+  width: 70px;
+  height: 70px;
+  border: solid 5px #666;
+  border-radius: 100px;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  /* TODO: make into circles */
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+
+  animation-name: fall-animation;
+  animation-duration: 500ms;
+  
+}
+
+
+
+@keyframes fall-animation {
+  from {
+      transform: translateY(-500px);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
+/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+
+.piece.p1{
+  background-color: red;
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+  padding: 0%;
+  margin: 0 auto;
+
+}
+
+.piece.p2{
+  background-color: blue;
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+  padding: 0%;
+  margin: 0 auto;
+  
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 5px rgb(167, 164, 164);
+  cursor: pointer;
+}
+
+#column-top td:hover {
+  /*background-color: blue;*/
+  background-color: rgb(21, 28, 34);
+    -webkit-transition: background-color 700ms linear;
+    -ms-transition: background-color 700ms linear;
+    transition: background-color 700ms linear;
+    
+}
+
+body{
+
+  background-image: url();
+
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.btn{
+ border-width: 2px;
+ border-color: black;
+ position: relative;
+ background-color: black;
+ color: white;
+ font-size: large;
+ position: fixed;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.btn:hover{
+  background-color: rgb(21, 28, 34);
+  -webkit-transition: background-color 600ms linear;
+  -ms-transition: background-color 600ms linear;
+  transition: background-color 600ms linear;
+  cursor: pointer;
+}
+
+h1{
+  font-size: 500%;
+ position: absolute;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+ top: 15%;
+ color: rgb(18, 95, 47);
+ margin: 0 auto;
+}
