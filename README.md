@@ -1,5 +1,5 @@
 # SpringboardProjects
 
-1. Connect Four Project
+1. [Connect Four Project](connect-four/index.html)
 
-[a relative link](connect-four/index.html)
+
