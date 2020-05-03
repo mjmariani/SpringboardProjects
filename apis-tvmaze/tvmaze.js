@@ -21,7 +21,7 @@ async function searchShows(query) {
   // TODO: Make an ajax request to the searchShows api.  Remove
   // hard coded data.
   let query1 = query;
-  const showInfo = await axios.get('http://api.tvmaze.com/search/shows', {params: {
+  const showInfo = await axios.get('https://api.tvmaze.com/search/shows', {params: {
     q: query1
   }
 }); 
@@ -107,7 +107,7 @@ $("#shows-list").on("click", async function handleEpisodeClick(evt) {
  */
 
 async function getEpisodes(id) {
-  let response = await axios.get(`http://api.tvmaze.com/shows/${id}/episodes`);
+  let response = await axios.get(`https://api.tvmaze.com/shows/${id}/episodes`);
 
   let episodes = response.data.map(episode => ({
     id: episode.id,
