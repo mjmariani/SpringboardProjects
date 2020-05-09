@@ -28,7 +28,7 @@ let categories = [];
 
 async function getCategoryIds() {
     console.log(categories);
-    let categoryIds = await axios.get("http://jservice.io/api/categories", 
+    let categoryIds = await axios.get("https://jservice.io/api/categories", 
     {params: {
         count: 100
     }}
@@ -80,7 +80,7 @@ async function getCategoryIds() {
 
 async function getCategory(id) {
 
-    let categoryObj = await axios.get("http://jservice.io/api/category", {
+    let categoryObj = await axios.get("https://jservice.io/api/category", {
         params: {
             id: id
 
@@ -302,3 +302,4 @@ function init(){
 
 $(document).ready(init);
 
+//Some bugs include not being able to click directly on question mark symbol and get a response
